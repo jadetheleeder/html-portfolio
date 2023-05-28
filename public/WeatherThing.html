@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather thing</title>
+    <style>
+        h1 {
+          text-align: center;
+        }
+        h2{ text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      p{
+          text-align: center;
+          margin: 20px 20px 20px 20px;
+      }
+      h4 {
+          text-align: center;
+
+          padding: 20px 20px 20px 20px;
+          margin: 10px 600px 10px 600px;
+          transition: 200ms ease-in-out;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-size: 50px
+        ;
+      }
+      div {text-align: center;
+      margin: 30px;}
+      h4:hover {
+        background-color: bisque
+        ;
+      }
+
+      button {
+        color: #fdfdfd;
+        background: #38b6ff;
+        border-radius: 30px;
+        border: 1px solid white;
+        font-weight: thin;
+        box-shadow: 5px 5px 10px 2px rgba(205, 204, 204, 0.8);
+        transition: all 200ms ease-in-out
+        cursor: pointer ;
+        display: block;
+        margin: auto;
+        padding: 10px 20px 10px 20px;
+      }
+      button:hover {
+        background-color: aliceblue;
+        color: #38b6ff;
+      }
+        .title {
+          text-align: center;
+          color: #38b6ff;
+        }
+        .high-temp {
+          font-weight: bolder;
+        }
+        .change {
+        font-weight: bolder;}
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Currently 20° in Tokyo</h1>
+    <h2>
+      13°
+      <span class="change">/23°</span>
+    </h2>
+    <h4>
+      🌧️ Tomorrow
+      <p>10° / 22°</p>
+    </h4>
+    <h4>
+      🌥️ Saturday
+      <p>15° / 17°</p>
+    </h4>
+    <h4>
+      ☀️ Sunday
+      <p>25° / 28°</p>
+    </h4>
+    <button>Change City</button>
+    <div>Coded by Jade</div>
+    <script>
+      function change() {
+        let city = prompt("Where do you live?");
+        let temp = prompt("What is the temperature?");
+        let header = document.querySelector("h1");
+
+        if (temp < 0) {
+          header.innerHTML = "☹️ <h1> Currently " + temp + "°C in " + city;
+        } else {
+          header.innerHTML = " <h1> Currently " + temp + "°C in " + city;
+        }
+      }
+      let cityChange = document.querySelector("button");
+
+      cityChange.addEventListener("click", change);
+    </script>
+  </body>
+</html>

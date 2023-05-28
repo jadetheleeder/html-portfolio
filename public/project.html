@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FairyCorsetTops</title>
+    <style>
+      body {
+        background: linear-gradient(
+          to bottom,
+          rgb(217, 250, 255) 0%,
+          white 100%
+        );
+      }
+      h1 {
+        text-align: center;
+        color: rgb(2, 29, 27);
+        border: 6px dotted rgb(153, 176, 180);
+        padding: 10px 12px;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+        color: rgb(2, 29, 27);
+        font-size: 18px;
+        margin: 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px 70px;
+        border: 3px solid rgb(180, 137, 19);
+        max-width: 100%;
+      }
+      p {
+        line-height: 2;
+        font-size: 15px;
+        text-align: center;
+      }
+      a {
+        text-align: center;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(2, 29, 27);
+        color: rgb(226, 249, 252);
+        font-size: 24px;
+        border-radius: 8px;
+        width: 200px;
+        height: 50px;
+      }
+      button:hover {
+        background-color: transparent;
+        border: 3px solid rgb(180, 137, 19);
+        color: rgb(180, 137, 19);
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgb(2, 29, 27);
+        cursor: pointer;
+        transition: all 200ms;
+      }
+      hr {
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+      .visit {
+        display: block;
+        margin: 10px 10px;
+        color: brown;
+
+        text-decoration: none;
+      }
+      .visit:hover {
+        text-decoration: underline;
+        color: darkgreen;
+      }
+      .page {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Fairy Tale Corsets</h1>
+      <hr />
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/950/original/Untitled_design%284%29.png?1684889555"
+        alt="women in a corset and puffy dress"
+        width="300"
+      />
+      <h2>For just $23.99 you to can live the fairytale life</h2>
+      <p>
+        Made from fresh silk and hand stitched to create timeless and lasting
+        seams. This corset will create the most beautiful body-line while
+        allowing the wearer to be comfortable and suppported. Pair it with some
+        soft pantaloons or a beautiful fluffy dress. We source all our products
+        sustainably so you can trust out quality completely. Join the
+        <em>club</em> and follow the vibe of the
+        <em><strong>Fairy Tribe</strong></em
+        >.
+      </p>
+      <a
+        href="https://www.phillyfaire.com/events/sat-may-27th-the-philly-ren-faire-2023"
+        target="_blank"
+        class="visit"
+      >
+        Visit The RenFaire
+      </a>
+      <hr />
+      <hr />
+      <button class="buy-button">Buy Now</button>
+      <br />
+      <p>Coded by Jade Lee 🧚🏽</p>
+    </div>
+  </body>
+  <script>
+    function change() {
+      let name = prompt("What's your name?");
+      let size = prompt("what size do you wear in numbers");
+      let header = document.querySelector("h1");
+      if (size > 0) {
+        header.innerHTML =
+          "<h1> Yayy! " +
+          name +
+          ", your size " +
+          size +
+          " corset is on the way!!";
+      }
+    }
+    let cityChange = document.querySelector("button");
+
+    cityChange.addEventListener("click", change);
+  </script>
+</html>
